@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aba mình đi đâu thée</title>
+    <link rel="stylesheet" href="css1.css">
+    <link href="https://fonts.google.com/specimen/Pacifico?lang=vi_Latn" rel="stylesheet">
+</head>
+<body>
+    <!-- Phần bìa -->
+    <img id="home" src="bia/biaa.png" alt="Bìa" style="width: 100%; object-fit: cover;">
+    <nav>
+        <ul>
+            <li><a href="#home">Về 12A3 </a></li>
+            <li><a href="#members">Thành viên</a></li>
+            <li><a href="#teachers">Giáo viên chủ nhiệm</a></li>
+            <li><a href="#activities">Hoạt động của lớp</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section  class="card">
+            <h2> VỀ 12A3 </h2>
+            <p>LGth gì đó </p>
+        </section>
+
+        <section id="members" class="card">
+            <h2>Danh sách thành viên</h2>
+        </section>
+            <!-- Nút mở hộp thoại -->
+        <a href="#" class="dialog-btn" id="qnga-btn">
+        <img src="Tvien/Quỳnh Nga.png" alt="Quỳnh Nga" id="qnga-image">
+        </a>
+        <!-- Hộp thoại -->
+        <div class="dialog" id="qnga">
+            <div class="dialog-body">
+                <a href="#" class="dialog-close-btn" id="close-btn">✖</a>
+                <h3>QNga</h3>
+                <p>Ngày sinh: 28-01-2007</p>
+
+            </div>
+        </div>
+
+       
+
+        <section id="teachers" class="card">
+            <h2>Giáo viên chủ nhiệm</h2>
+            <p>Thầy/Cô giáo luôn đồng hành cùng chúng tôi trên con đường học tập.</p>
+        </section>
+
+        <section id="activities" class="card">
+            <h2>Hoạt động của lớp</h2>
+            <p>Chúng tôi thường xuyên tổ chức các hoạt động ngoại khóa, sự kiện và hội thao.</p>
+        </section>
+    </div>
+    
+    <!-- Phần bình luận -->
+    <section id="comments">
+        <h2>Để lại cảm nghĩ của bạn nào 💜</h2>
+        <form id="commentForm">
+            <label for="name">Tên của bạn:</label>
+            <input type="text" id="name" name="name" required placeholder="Nhập tên của bạn">
+
+            <label for="comment">Bình luận:</label>
+            <textarea id="comment" name="comment" rows="4" required placeholder="Nhập bình luận của bạn"></textarea>
+
+            <button type="submit">Gửi bình luận</button>
+        </form>
+
+        <!-- Danh sách bình luận sẽ được thêm vào đây -->
+        <div id="commentList" class="comment-list"></div>
+    </section>
+
+    <footer>
+        <p>© 2025 Lớp 12A3. Tất cả các quyền được bảo lưu.</p>
+        <p>Email: <a href="mailto:A3chuyenhungvuong@gmail.com">A3chuyenhungvuong@gmail.com</a></p>
+    </footer>
+
+<!-- Nút quay lại đầu trang -->
+<a href="#" id="backToTop" class="back-to-top">↑</a>
+
+<script src="java.js"></script>
+
+</body>
+</html>

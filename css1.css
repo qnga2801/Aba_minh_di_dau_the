@@ -1,0 +1,217 @@
+
+
+body {
+    font-family: 'Pacifico', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #BFD8D2;
+    color: #333;
+    text-align: center;
+    background-color: #BFD8D2;
+}
+
+header {
+    background: #BFD8D2;
+    color: white;
+    padding: 20px 0;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: #FF8A80;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+/* Ẩn hộp thoại mặc định */
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Làm mờ nền khi mở hộp thoại */
+    display: none; /* Mặc định ẩn đi */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Nội dung hộp thoại */
+.dialog-body {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    position: relative;
+
+}
+
+/* Nút đóng hộp thoại */
+.dialog-close-btn {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dialog-close-btn:hover {
+    color: #FF6F61;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background: #FFFFFF;
+    padding: 20px;
+    margin: 20px;
+    width: 60%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Phần bình luận */
+#commentList {
+    display: grid; /* Sử dụng Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 cột mỗi hàng */
+    gap: 20px; /* Khoảng cách giữa các bình luận */
+    margin-top: 20px;
+    justify-items: center; /* Căn giữa các bình luận trong mỗi cột */
+}
+
+.comment-item {
+    background-color: #BFD8D2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Đảm bảo mỗi bình luận không quá rộng */
+    max-width: 300px; /* Giới hạn chiều rộng tối đa cho mỗi bình luận */
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#comments {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#commentForm input, #commentForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Đảm bảo padding không làm lệch kích thước */
+    font-size: 1rem;
+}
+
+#commentForm button {
+    background-color: #FF6F61;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#commentForm button:hover {
+    background-color: #2f66ae;
+}
+
+/* Hiệu ứng hover cho các bình luận */
+.comment-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Nút quay lại đầu trang */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;  /* Cách từ dưới lên */
+    right: 20px;  /* Cách từ phải vào */
+    background-color: #FF6F61; /* Màu nền */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none; /* Bỏ viền */
+    list-style: none;  
+    text-decoration: none; 
+    display: flex;  
+    display: inline-block;
+}
+
+
+/* Hiệu ứng hover */
+.back-to-top:hover {
+    background-color: #2f66ae; /* Màu nền khi hover */
+}
+
+/* Đảm bảo không bị che khuất */
+body {
+    padding-bottom: 70px; /* Giới hạn để tránh che mất */
+}
+
+
+
+
+footer {
+    background: #FF6F61;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+   
